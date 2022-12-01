@@ -3,7 +3,6 @@ with open("input", "r") as f:
     score_now = 0
     highest_all_time = 0
     big_calories = []
-    test = []
     while True:
         calories = f.readline()
         if not calories:
