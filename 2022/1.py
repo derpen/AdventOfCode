@@ -3,6 +3,7 @@ with open("input", "r") as f:
     score_now = 0
     highest_all_time = 0
     big_calories = []
+    test = []
     while True:
         calories = f.readline()
         if not calories:
@@ -12,14 +13,15 @@ with open("input", "r") as f:
         else:
             if score_now > highest_all_time:
                 highest_all_time = score_now
-                big_calories.append(highest_all_time)
+            big_calories.append(score_now)
             score_now = 0
 
-    print(highest_all_time)
+    # print(highest_all_time)
 
     # part 2
-    ordered = big_calories[::-1]
+    big_calories.sort()
+    ordered = big_calories[-3:]
     total = 0
-    for i in range(0,3):
+    for i in range(0,len(ordered)):
         total += ordered[i]
     print(total)
