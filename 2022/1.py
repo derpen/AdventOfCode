@@ -1,4 +1,4 @@
-with open("input", "r") as f:
+with open("input1", "r") as f:
     # part 1
     score_now = 0
     highest_all_time = 0
@@ -15,7 +15,7 @@ with open("input", "r") as f:
             big_calories.append(score_now)
             score_now = 0
 
-    # print(highest_all_time)
+    print(f"The highest number is : {highest_all_time}")
 
     # part 2
     big_calories.sort()
@@ -23,4 +23,4 @@ with open("input", "r") as f:
     total = 0
     for i in range(0,len(ordered)):
         total += ordered[i]
-    print(total)
+    print(f"The sum of top 3 highest is : {total}")
